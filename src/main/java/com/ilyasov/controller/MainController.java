@@ -50,12 +50,12 @@ public class MainController {
         return "allusers";
     }
 
-    @RequestMapping(value = "/{userId}")
-    public String userPage(@PathVariable long userId, Model model){
-        User user = userService.findOneById(userId);
-        model.addAttribute("user", user);
-        model.addAttribute("posts",postService.findAllByRecipient(user));
-        model.addAttribute("postForm", new PostForm());
-        return "home";
-    }
+//    @RequestMapping(value = "/{userId}")
+//    public String userPage(@PathVariable long userId, Model model){
+//        User user = userService.findOneById(userId);
+//        model.addAttribute("user", user);
+//        model.addAttribute("posts",postService.findAllByRecipient(user));
+//        model.addAttribute("postForm", new PostForm());
+//        return "home";
+//    }
 }
